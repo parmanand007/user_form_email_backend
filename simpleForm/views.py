@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import User
 from .serializers import UserSerializer
-from .utils import send_form_submission_email
+from .tasks import send_form_submission_email
 
 class UserFormAPIView(APIView):
     def post(self, request, format=None):
