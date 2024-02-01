@@ -72,7 +72,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'assignments.wsgi.application'
 
+# settings.py
 
+# # set the celery broker url 
+# CELERY_BROKER_URL = 'redis://localhost:6379/0'
+  
+# # set the celery result backend 
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+  
+# set the celery timezone 
+CELERY_TIMEZONE = 'Asia/Kolkata'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -110,13 +121,14 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'parmanandprajapati0012@gmail.com'
-EMAIL_HOST_PASSWORD ='qjdk zkza cabc xjkv'
+EMAIL_HOST_PASSWORD ='prbz zcng kqcz gcoq'
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE =  'Asia/Kolkata'
+
 
 USE_I18N = True
 
