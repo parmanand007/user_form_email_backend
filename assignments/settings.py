@@ -74,16 +74,6 @@ WSGI_APPLICATION = 'assignments.wsgi.application'
 
 # settings.py
 
-# # set the celery broker url 
-# CELERY_BROKER_URL = 'redis://localhost:6379/0'
-  
-# # set the celery result backend 
-# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60
-  
-# set the celery timezone 
-CELERY_TIMEZONE = 'Asia/Kolkata'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
