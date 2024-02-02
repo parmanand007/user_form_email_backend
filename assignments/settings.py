@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#x^nw@gz6w9ndz2bmf3!a1af8_p2e8z-^7v)+johko6hn5=eg7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*",'.vercel.app']
 
 
 # Application definition
@@ -102,6 +102,28 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+# # set the celery broker url 
+# # CELERY_BROKER_URL = 'redis://default:nHE1ahhGMJiaeIaOIaKLi62GfeOdlfEI@viaduct.proxy.rlwy.net:55189'
+  
+# CELERY_BROKER_URL = 'redis://default:nHE1ahhGMJiaeIaOIaKLi62GfeOdlfEI@redis.railway.internal:6379'
+# # set the celery result backend 
+# # CELERY_RESULT_BACKEND = 'redis://default:nHE1ahhGMJiaeIaOIaKLi62GfeOdlfEI@viaduct.proxy.rlwy.net:55189'
+# CELERY_RESULT_BACKEND = 'redis://default:nHE1ahhGMJiaeIaOIaKLi62GfeOdlfEI@redis.railway.internal:6379'
+  
+# # set the celery timezone 
+# CELERY_ACCEPT_CONTENT=['application/json']
+# CELERY_RESULT_SERIALIZER='json'
+# CELERY_TASK_SERIALIZER='json'
+
+# CELERY_TIMEZONE = "Asia/Kolkata"
+# # CELERY_TASK_TRACK_STARTED = True
+# # CELERY_TASK_TIME_LIMIT = 30 * 60
+# broker_connection_retry_on_startup = True
+
+
+REDIS_URL = 'redis://default:4B5jgDE2hFOfoPpPDOeJBfic2ANComeo@roundhouse.proxy.rlwy.net:46494'
 
 AUTH_USER_MODEL ='simpleForm.User'
 SENDER_EMAIL = 'parmanand.p@brimo.in'
