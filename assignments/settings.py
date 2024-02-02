@@ -54,8 +54,9 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000','https://user-form-email-frontend.vercel.app/'
+    'http://localhost:3000','https://user-form-email-frontend.vercel.app'
 ]
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'assignments.urls'
 
 TEMPLATES = [
