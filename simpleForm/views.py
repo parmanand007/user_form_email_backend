@@ -25,7 +25,7 @@ class UserFormAPIView(APIView):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save() #signal is used to send meail
-            # send_form_submission_email.delay(email)
+            send_form_submission_email.delay(email)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
